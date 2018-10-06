@@ -1,0 +1,72 @@
+html,body{
+  height: 100%;
+}
+
+.tableDiv {
+  height: 100%;
+  width: 100%;
+  background-color: navy;
+}
+
+.gifDiv {
+  height: 100%;
+  width: 100%;
+  background-color: navy;
+}
+
+.gifElement {
+  height: 100%;
+  width: 95%;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFF0;
+}
+
+.tableElement {
+  height: 100%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFF0;
+}
+
+.tableHeader {
+  height: 10%;
+}
+
+.tableRow {
+  height: 18%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 2%;
+}
+
+table td.checked
+{
+  background-image: url("red-x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
+
+.bingoGif {
+    display:block;
+    margin:auto;
+}
