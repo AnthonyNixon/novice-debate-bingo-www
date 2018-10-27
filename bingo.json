@@ -74,6 +74,9 @@
     },
     {
       "content": "Nobody using timers"
+    },
+    {
+      "content": "Reads half of a position in 1NC and the other half in the block"
     }
   ]
 }
