@@ -77,6 +77,9 @@
     },
     {
       "content": "Reads half of a position in 1NC and the other half in the block"
+    },
+    {
+      "content": "Prep time used for the 1NR"
     }
   ]
 }
