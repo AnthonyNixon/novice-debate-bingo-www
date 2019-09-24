@@ -73,14 +73,13 @@ table td.checked
 }
 
 .wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
+  /*min-height: 100%;*/
+  /*height: auto !important;*/
+  /*height: 100%;*/
   margin: 0 auto -4em;
-  background-color: #3f51b5;
 }
 
 .welcomeDiv, md-toolbar {
-  padding-left: 2%;
-  padding-right: 2%;
+  background-color: #FFFFF0;
+  padding: 5%;
 }
