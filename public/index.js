@@ -62,9 +62,11 @@ app.controller('homeCtrl', function ($scope) {
 
 });
 
-app.controller('bingoCtrl', function ($scope, $http, $routeParams) {
+app.controller('bingoCtrl', function ($scope, $http, $routeParams, $timeout) {
     $scope.fields = [];
     $scope.bingo = false;
+    $scope.previousBingo = false;
+    $scope.firstLoad = true;
     $scope.boardCode = $routeParams.code;
 
     console.log("Boardcode", $scope.boardCode);
@@ -108,6 +110,17 @@ app.controller('bingoCtrl', function ($scope, $http, $routeParams) {
             for (y = 0; y < 5; y++) {
                 $scope.grid[x][y] = {content: data.boxes[x][y].content, checked: data.boxes[x][y].checked, coordinates: data.boxes[x][y].coordinates};
             }
+        }
+
+        if (data.bingo) {
+            if (!$scope.previousBingo && !$scope.firstLoad){
+                $scope.bingo = true;
+                $scope.previousBingo = true;
+                $scope.firstLoad = false;
+            }
+            bingoTimeout = $timeout(function() {
+               $scope.bingo = false;
+            }, 5000);
         }
 
         console.log("hi");
