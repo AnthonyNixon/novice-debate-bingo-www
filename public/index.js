@@ -87,6 +87,7 @@ app.controller('bingoCtrl', function ($scope, $http, $routeParams, $timeout) {
         console.log("Clicking", x, y);
         var onSuccess = function(response) {
             updateGrid(response.data);
+            $scope.firstLoad = false;
         };
 
         var onError = function(data) {
@@ -116,7 +117,6 @@ app.controller('bingoCtrl', function ($scope, $http, $routeParams, $timeout) {
             if (!$scope.previousBingo && !$scope.firstLoad){
                 $scope.bingo = true;
                 $scope.previousBingo = true;
-                $scope.firstLoad = false;
             }
             bingoTimeout = $timeout(function() {
                $scope.bingo = false;
